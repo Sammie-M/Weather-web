@@ -1,0 +1,59 @@
+body{
+  background-color: #eaf0ed;
+ font-family: 'Titillium Web', sans-serif;
+}
+
+main,.next-day{
+  border: 2px inset #d5d5d5;
+  border-radius: 5px;
+
+}
+
+p{
+  display: block;
+}
+
+#search{
+  width: 400px;
+  height: 40px;
+  border-radius: 50px;
+  border: 2px inset  #d5d5d5;
+}
+
+#current-loc{
+ background-color: #ded8d8;
+}
+
+.search-btn, #current-loc{
+  border-radius: 50px;
+  padding: 5px 20px;
+}
+.main-container{
+  display: block;
+  margin: 200px;
+  margin-top: 30px;
+  padding: 50px;
+  border: 4px outset #dce3e0;
+}
+.temp-Today{
+  font-size: 50px;
+}
+.fa-sun{
+  font-size: 30px;
+}
+
+.sun{
+  font-size: 100px;
+ 
+}
+
+.search{
+  position: relative;
+  right: -600px;
+  top: -90px;
+}
+
+
+.next-Temp{
+  font-size: 200%;
+}
