@@ -48,7 +48,7 @@ function displayTemp(response) {
   let tempElement = document.querySelector("#temp-today");
   tempElement.innerHTML = `${Math.round(celsiusTemp)}℃`;
   document.querySelector(
-    "#description"
+    "#today-description"
   ).innerHTML = `${response.data.weather[0].description}`;
   document.querySelector("#feelsLike").innerHTML = `${Math.round(
     response.data.main.feels_like
@@ -59,6 +59,13 @@ function displayTemp(response) {
   document.querySelector("#windy").innerHTML = `${Math.round(
     response.data.wind.speed
   )}m/s`;
+
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function findCity(city) {
