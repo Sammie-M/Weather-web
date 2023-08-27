@@ -43,10 +43,10 @@ function currentDate() {
 }
 
 function displayTemp(response) {
+  celsiusTemp = response.data.main.temp;
   document.querySelector("#city").innerHTML = `${response.data.name}`;
-  document.querySelector("#temp-today").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}℃`;
+  let tempElement = document.querySelector("#temp-today");
+  tempElement.innerHTML = `${Math.round(celsiusTemp)}℃`;
   document.querySelector(
     "#description"
   ).innerHTML = `${response.data.weather[0].description}`;
@@ -98,22 +98,25 @@ currentLocation.addEventListener("click", currentLoc);
 
 findCity("Bedworth Park");
 
-/*function toCelsius(event) {
+let celsiusTemp = null;
+
+function toCelsius(event) {
   event.preventDefault();
 
   let temperatureElement = document.querySelector("#temp-today");
-  temperatureElement.innerHTML = 22;
+  temperatureElement.innerHTML = `${Math.round(celsiusTemp)}℃`;
 }
 
 function toFahrenheit(event) {
   event.preventDefault();
 
   let temperatureElement = document.querySelector("#temp-today");
-  temperatureElement.innerHTML = 71.6;
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)}℉`;
 }
 
 let celsius = document.querySelector("#to-celsius");
 celsius.addEventListener("click", toCelsius);
 
 let fahrenheit = document.querySelector("#to-fahrenheit");
-fahrenheit.addEventListener("click", toFahrenheit);*/
+fahrenheit.addEventListener("click", toFahrenheit);

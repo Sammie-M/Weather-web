@@ -1,11 +1,11 @@
 body {
-  background-color: #eaf0ed;
+  background-color: #7fa9af;
   font-family: "Titillium Web", sans-serif;
 }
 
 main,
 .next-day {
-  border: 2px inset #d5d5d5;
+  border: 2px inset #8cb0ad;
   border-radius: 5px;
 }
 
@@ -32,13 +32,16 @@ footer {
   border-radius: 50px;
   padding: 5px 20px;
 }
+#icon{
+  width: 100px;
+}
 .main-container {
   display: block;
   margin: 200px;
   margin-top: 30px;
   padding: 50px;
   padding-bottom: 0px;
-  border: 4px outset #dce3e0;
+  border: 4px outset #759396;
 }
 .temp-Today {
   font-size: 50px;
