@@ -1,7 +1,6 @@
 body {
   background-image:url("Cloudy.jpg");
   background-size: 100%;
-  background-repeat: no-repeat;
   font-family: "Titillium Web", sans-serif;
 }
 
@@ -21,7 +20,7 @@ footer {
 #search {
   width: 400px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: 2px inset #d5d5d5;
 }
 
@@ -31,7 +30,7 @@ footer {
 
 .search-btn,
 #current-loc {
-  border-radius: 50px;
+  border-radius: 15px;
   padding: 5px 20px;
 }
 #icon{
@@ -47,6 +46,21 @@ footer {
   padding-bottom: 0px;
   border: 4px outset #759396;
 }
+
+.headerFlex{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.col1{
+  flex-grow: 9;
+}
+
+col2{
+ flex-grow: 4;
+}
+
 .temp-Today {
   font-size: 50px;
 }
@@ -56,12 +70,6 @@ footer {
 
 .sun {
   font-size: 100px;
-}
-
-.search {
-  position: relative;
-  right: -600px;
-  top: -90px;
 }
 
 .next-Temp {

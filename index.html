@@ -31,14 +31,19 @@
   <body>
     <div class="main-container">
       <header>
-        <h1 id="today-day">Thursday</h1>
-        <p id="today-date">27 July 2023, 15:30</p>
-
-        <form class="search">
-          <input type="search" id="search" placeholder="Search new city..." />
-          <input type="submit" value="search" class="search-btn" />
-          <input type="submit" value="Current location" id="current-loc" />
-        </form>
+        <div class="headerFlex">
+          <div class="col1">
+            <h1 id="today-day">Thursday</h1>
+            <p id="today-date">27 July 2023, 15:30</p>
+          </div>
+          <div class="col2">
+            <form class="search">
+              <input type="search" id="search" placeholder="Search new city..." />
+              <input type="submit" value="search" class="search-btn" />
+              <input type="submit" value="Current location" id="current-loc" />
+            </form>
+          </div>
+        </div>
       </header>
       <main>
         <div class="container">
@@ -79,68 +84,8 @@
 
       <section>
         <h4>Next day...</h4>
-        <div class="container">
-          <div class="row justify-content-around">
-            <div class="col-2 next-day">
-              <strong>Friday</strong> <br />
-              Sunny
-              <p>
-                <span class="next-Temp">24℃</span>
-                <img
-                  src="https://openweathermap.org/img/wn/01d@2x.png"
-                  alt="weather-icon"
-                />
-              </p>
-            </div>
-
-            <div class="col-2 next-day">
-              <strong>Sarturday</strong> <br />
-              Windy & Partially Cloudy
-              <p>
-                <span class="next-Temp">22℃</span>
-                <img
-                  src="https://openweathermap.org/img/wn/04d@2x.png"
-                  alt="weather-icon"
-                />
-              </p>
-            </div>
-
-            <div class="col-2 next-day">
-              <strong>Sunday</strong>
-              <br />Clear & Windy
-              <p>
-                <span class="next-Temp">13℃</span>
-                <img
-                  src="https://openweathermap.org/img/wn/03d@2x.png"
-                  alt="weather-icon"
-                />
-              </p>
-            </div>
-
-            <div class="col-2 next-day">
-              <strong>Monday</strong>
-              <br />Clear
-              <p>
-                <span class="next-Temp">16℃</span>
-                <img
-                  src="https://openweathermap.org/img/wn/01d@2x.png"
-                  alt="weather-icon"
-                />
-              </p>
-            </div>
-
-            <div class="col-2 next-day">
-              <strong>Tuesday</strong>
-              <br />Generally Clear
-              <p>
-                <span class="next-Temp">18℃</span>
-                <img
-                  src="https://openweathermap.org/img/wn/02d@2x.png"
-                  alt="weather-icon"
-                />
-              </p>
-            </div>
-          </div>
+        <div class="container" id="forecast">
+          
         </div>
       </section>
       <footer>

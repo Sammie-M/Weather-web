@@ -68,6 +68,33 @@ function displayTemp(response) {
     );
 }
 
+function displayForecast(){
+  let forecastHTML = `<div class="row justify-content-around">`;
+  let days = ["Wednesday","Thursday","Friday","Saturday"];
+  
+  days.forEach(function(day){
+    forecastHTML = forecastHTML +
+    `
+  <div class="col-2 next-day">
+    <strong>Friday</strong> <br />
+      Sunny
+    <p>
+      <span class="next-Temp">24℃</span>
+      <img
+        src="https://openweathermap.org/img/wn/01d@2x.png"
+        alt="weather-icon"
+      />
+    </p>
+  </div>
+  `; 
+  });
+ 
+  forecastHTML = forecastHTML + `</div>`;
+
+  let forecastElement = document.querySelector("#forecast").innerHTML = forecastHTML;
+
+}
+
 function findCity(city) {
   let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
   let api_url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -94,18 +121,6 @@ function currentLoc(event) {
   navigator.geolocation.getCurrentPosition(displayPosition);
 }
 
-let todayDate = document.querySelector("#today-date");
-todayDate.innerHTML = currentDate();
-
-let city = document.querySelector(".search");
-city.addEventListener("submit", changeCity);
-
-let currentLocation = document.querySelector("#current-loc");
-currentLocation.addEventListener("click", currentLoc);
-
-findCity("Bedworth Park");
-
-let celsiusTemp = null;
 
 function toCelsius(event) {
   event.preventDefault();
@@ -121,6 +136,20 @@ function toFahrenheit(event) {
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)}℉`;
 }
+
+let todayDate = document.querySelector("#today-date");
+todayDate.innerHTML = currentDate();
+
+let city = document.querySelector(".search");
+city.addEventListener("submit", changeCity);
+
+let currentLocation = document.querySelector("#current-loc");
+currentLocation.addEventListener("click", currentLoc);
+
+displayForecast();
+findCity("Bedworth Park");
+
+let celsiusTemp = null;
 
 let celsius = document.querySelector("#to-celsius");
 celsius.addEventListener("click", toCelsius);
