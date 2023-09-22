@@ -5,7 +5,7 @@ function currentDate() {
     "Monday",
     "Tuesday",
     "Wednesday",
-    "THursday",
+    "Thursday",
     "Friday",
     "Sartuday",
   ];
@@ -66,9 +66,12 @@ function displayTemp(response) {
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+
+    getForecast(response.data.coord);
 }
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastHTML = `<div class="row justify-content-around">`;
   let days = ["Wednesday","Thursday","Friday","Saturday"];
   
@@ -76,7 +79,7 @@ function displayForecast(){
     forecastHTML = forecastHTML +
     `
   <div class="col-2 next-day">
-    <strong>Friday</strong> <br />
+    <strong>${day}</strong> <br />
       Sunny
     <p>
       <span class="next-Temp">24℃</span>
@@ -92,6 +95,16 @@ function displayForecast(){
   forecastHTML = forecastHTML + `</div>`;
 
   let forecastElement = document.querySelector("#forecast").innerHTML = forecastHTML;
+
+}
+
+function getForecast(coordinates){
+ console.log(coordinates)
+   let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
+   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+   
+   console.log(apiUrl);
+   axios.get(apiUrl).then(displayForecast);
 
 }
 
@@ -146,7 +159,7 @@ city.addEventListener("submit", changeCity);
 let currentLocation = document.querySelector("#current-loc");
 currentLocation.addEventListener("click", currentLoc);
 
-displayForecast();
+
 findCity("Bedworth Park");
 
 let celsiusTemp = null;
