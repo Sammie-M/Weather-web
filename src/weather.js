@@ -21,6 +21,7 @@ function currentDate() {
     "July",
     "August",
     "September",
+    "October",
     "November",
     "December",
   ];
@@ -99,7 +100,7 @@ function displayForecast(response){
     if (index > 0 && index < 6){
     
     forecastHTML += `
-  <div class="col-2 next-day">
+  <div class="col-md next-day">
     <strong>${formatForecast(forecastDay.time)}</strong> <br />
       ${forecastDay.condition.description}
     <p>

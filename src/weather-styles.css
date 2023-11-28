@@ -4,74 +4,17 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
-main,
-.next-day {
-  border: 2px inset #8cb0ad;
-  border-radius: 5px;
+.weather-content{
+  width: 80%;
+  background-color: rgba(215, 235, 238, 0.5);
+  margin-top: 5%;
+  padding: 5%;
 }
 
-p {
-  display: block;
+.temp-Today{
+  font-size: 3rem;
 }
 
-footer {
-  margin-top: 30px;
-}
-#search {
-  width: 400px;
-  height: 40px;
-  border-radius: 10px;
-  border: 2px inset #d5d5d5;
-}
-
-#current-loc {
-  background-color: #ded8d8;
-}
-
-.search-btn,
-#current-loc {
-  border-radius: 15px;
-  padding: 5px 20px;
-}
-#icon{
-  width: 100px;
-}
-
-.main-container {
-  background-color:rgba(216, 216, 216, 0.3);
-  display: block;
-  margin: 200px;
-  margin-top: 30px;
-  padding: 50px;
-  padding-bottom: 0px;
-  border: 4px outset #759396;
-}
-
-.headerFlex{
-  display: flex;
-  flex-direction: row;
-
-}
-
-.col1{
-  flex-grow: 9;
-}
-
-col2{
- flex-grow: 4;
-}
-
-.temp-Today {
-  font-size: 50px;
-}
-.fa-sun {
-  font-size: 30px;
-}
-
-.sun {
-  font-size: 100px;
-}
-
-.next-Temp {
-  font-size: 200%;
+.next-Temp{
+  font-size: 2rem;
 }
